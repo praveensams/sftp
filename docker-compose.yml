@@ -6,6 +6,6 @@ services:
       context: .
       dockerfile: sftp.dockerfile
     ports:
-      - '8080:22'
+      - '6060:22'
     volumes:
       - /sftp:/home
