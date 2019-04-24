@@ -18,4 +18,4 @@ services:
     ports:
       - '7373:22'
     volumes:
-      - /retek_mule/images:/home
+      - /retek_mule/production_invoices:/home
