@@ -11,7 +11,7 @@ services:
     volumes:
       - /retek_mule:/home
 
-  sftp_images:
+  production_invoices:
     build:
       context: .
       dockerfile: sftp.dockerfile
