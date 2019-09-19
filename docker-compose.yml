@@ -2,14 +2,13 @@ version: '3'
 
 services:
 
-  sftp:
+  noon:
     build:
       context: .
-      dockerfile: sftp.dockerfile
-    ports:
+    ports2222:22'
       - '7272:22'
     volumes:
-      - /retek_mule:/home
+      - /retek_mule:/data
 
   production_invoices:
     build:
@@ -18,4 +17,4 @@ services:
     ports:
       - '7373:22'
     volumes:
-      - /retek_mule/production_invoices:/home
+      - /sftp/production_invoices:/home
