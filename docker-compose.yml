@@ -5,7 +5,7 @@ services:
   noon:
     build:
       context: .
-    ports2222:22'
+    ports:
       - '7272:22'
     volumes:
       - /retek_mule:/data
@@ -18,3 +18,22 @@ services:
       - '7373:22'
     volumes:
       - /sftp/production_invoices:/home
+
+  stage_invoices:
+    build:
+      context: .
+      dockerfile: sftp.dockerfile
+    ports:
+      - '2222:22'
+    volumes:
+      - /sftp/stage/data:/data
+
+   
+  retek:
+    build:
+      context: .
+      dockerfile: sftp.dockerfile
+    ports:
+      - '3030:22'
+    volumes:
+      - /sftp/retek:/home
