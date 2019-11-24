@@ -1,0 +1,1 @@
+ #docker run --name "apache" -v /retek_mule/production_invoices/hybrisinvoice/hybris/invoice:/usr/local/apache2/htdocs/ -p 5050:80 -dt httpd
